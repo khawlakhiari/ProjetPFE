@@ -72,7 +72,7 @@ Route::get('/jury_login',[\App\Http\Controllers\MembreJuryController::class, 'Sh
 Route::post('/login_jury',[\App\Http\Controllers\MembreJuryController::class, 'login_jury'])->name('login_jury');
 Route::get('/MJ_page',[\App\Http\Controllers\MembreJuryController::class, 'Show_MJ_page'])->name('MJ_page');
 Route::get('/add_MJ',[\App\Http\Controllers\MembreJuryController::class, 'Show_add_MJ_page'])->name('add_MJ');
-Route::post('/add_MJ',[\App\Http\Controllers\MasterController::class, 'add_MJ'])->name('add_MJ');
+Route::post('/add_MJ',[\App\Http\Controllers\MembreJuryController::class, 'add_MJ'])->name('add_MJ');
 
 /// ////// Membre  jury Routes//////
 

@@ -38,44 +38,62 @@
                             {{csrf_field()}}
                             <div class="col-md-12 form-group">
                                 <label class="creditcardtext" >Nom <span style="color:red"> * </span></label>
-
                                 <input type="text" class="form-control" name="nom" value="">
-
+                                @error('nom')
+                                <small class="form-text text-danger">{{$message}}</small>
+                                @enderror
                             </div>
                             <div class="col-md-12 form-group">
                                 <label class="creditcardtext" >Prenom <span style="color:red"> * </span></label>
 
                                 <input type="text" class="form-control"  name="prenom" value="">
-
+                                @error('prenom')
+                                <small class="form-text text-danger">{{$message}}</small>
+                                @enderror
                             </div>
 
                             <div class="col-md-12 form-group">
                                 <label class="creditcardtext" >Email <span style="color:red"> * </span></label>
 
                                 <input type="email" class="form-control"  name="email" value="">
-
+                                @error('email')
+                                <small class="form-text text-danger">{{$message}}</small>
+                                @enderror
                             </div>
                             <div class="col-md-12 form-group">
                                 <label class="creditcardtext" >Telephone <span style="color:red"> * </span></label>
-
-                                <input type="text" class="form-control"  name="telephone" value="">
-
+                             <input type="text" class="form-control"  name="telephone" value="">
+                                @error('telephone')
+                                <small class="form-text text-danger">{{$message}}</small>
+                                @enderror
                             </div>
                             <div class="col-md-12 form-group">
                                 <label class="creditcardtext" >Mot de passe <span style="color:red"> * </span></label>
 
                                 <input type="text" class="form-control"  name="password" value="">
+                                @error('password')
+                                <small class="form-text text-danger">{{$message}}</small>
+                                @enderror
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label class="creditcardtext" >Confirmer la Mot de passe <span style="color:red"> * </span></label>
 
+                                <input type="text" class="form-control"  name="password_confirmation" value="">
+                                @error('password_confirmation')
+                                <small class="form-text text-danger">{{$message}}</small>
+                                @enderror
                             </div>
                             <div class="col-md-12 form-group" >
                                 <label class="creditcardtext" >Il vas être le membre de jury de la master <span style="color:red"> * </span></label>
 
                                 <select id="select" name="master" class="custom-select" style="margin-top: 1px" >
                                     @foreach ($masters as $master)
-                                        <option value="{{$masters->master}}">{{$masters->master}}</option>
+                                        <option value="{{$master->master}}">{{$master->master}}</option>
                                     @endforeach
                                 </select>
-
+                                @error('master')
+                                <small class="form-text text-danger">{{$message}}</small>
+                                @enderror
                             </div>
                             <div class="col-sm-6" style="padding-top: 30px;">
                                 <button class="subscribe btn btn-primary btn-block" type="submit" style="border-radius: 35px 35px 35px 35px;

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Master extends Model
 {
     use HasFactory;
+    protected  $table='masters';
     protected $fillable = [
         'id',
         'master',
@@ -16,4 +17,8 @@ class Master extends Model
 
     ];
     public $timestamps=false;
+    public  function  Enseignant()
+    {
+        return $this->hasMany('App\Models\Enseignant','master_id','id');
+    }
 }
