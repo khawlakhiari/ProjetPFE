@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e84f0dc9-c444-4a93-b20c-e0abd93dce6e" name="Default Changelist" comment="" />
+    <list default="true" id="e84f0dc9-c444-4a93-b20c-e0abd93dce6e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Annee_universitaire.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Diplome.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Diplome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Dossier.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Dossier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Etudiant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Etudiant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Master.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Master.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Score.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Score.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +19,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -125,6 +137,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1pyvJniM6YEv555QgcKTrWPiNg8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -174,6 +187,7 @@
       <workItem from="1618170875519" duration="4630000" />
       <workItem from="1618222575859" duration="5913000" />
       <workItem from="1618263084904" duration="26184000" />
+      <workItem from="1618358227217" duration="7161000" />
     </task>
     <servers />
   </component>

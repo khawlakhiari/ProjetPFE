@@ -11,7 +11,7 @@ class Etudiant extends Model implements Authenticatable
 {
     use BasicAuthenticatable;
 protected  $table='etudiants';
-protected $primaryKey='id';
+
 
     protected $fillable = [
         'id',
@@ -32,16 +32,29 @@ protected $primaryKey='id';
         'adresse'
 
     ];
+    public $timestamps=false;
    ///// begin relations ////
+
+    public  function  Master()
+    {
+        return $this->belongsTo('App\Models\Master','master_id','id');
+    }
     public function  dossier(){
-        return $this->hasOne(Dossier::class);
+        return $this->hasOne(Dossier::class,'etud_id','id');
     }
     public function  diplome(){
-        return $this->hasOne(Diplome::class);
+        return $this->hasOne(Diplome::class,'etud_id');
     }
     public function  Score(){
         return $this->hasOne(Score::class);
     }
+    public function  parcour(){
+        return $this->belongsToMany(Parcour_annuelle::class,'etudiants_parcours_annuelle','etud_id','parcour_id');}
+    public function  Annes(){
+        return $this->belongsToMany(Annes_universitaire::class,'etudiants_annes_univ','etud_id','annee_id');}
+
+
+
     /// end relations////
 
     /**

@@ -17,8 +17,18 @@ class Master extends Model
 
     ];
     public $timestamps=false;
+    ///relations////
     public  function  Enseignant()
     {
         return $this->hasMany('App\Models\Enseignant','master_id','id');
     }
+    public  function  Etudiant()
+    {
+        return $this->hasMany('App\Models\Etudiant','master_id','id');
+    }
+    public  function  Critere_score()
+    {
+        return $this->hasMany('App\Models\Critere_score','master_id','id');
+    }
+    ///relations////
 }
