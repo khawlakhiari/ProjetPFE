@@ -15,6 +15,7 @@
             </li>
 
             <li class="navigation-item">
+
                 <a href="" class="navigation-item-link">Modifier membre de jury</a>
             </li>
 
@@ -36,7 +37,52 @@
                     <div class="row">
                         <form method="post" action="">
                             {{csrf_field()}}
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover table-condensed">
+                                    <tr>
+                                        <td> Id</td>
+                                        <td>Nom</td>
+                                        <td>Prenom</td>
+                                        <td>Email</td>
+                                        <td>Telephone</td>
+                                        <td>Master</td>
+                                    </tr>
 
+
+                                    <tr>
+                                        @foreach ($enseignants as $enseignant)
+                                            <td>{{ $i++ }}</td>
+                                            <td>{{ $enseignant->nom }}</td>
+                                            <td>{{ $enseignant->prenom }}</td>
+                                            <td>{{ $enseignant->email }}</td>
+                                            <td>{{ $enseignant->telephone }}</td>
+                                            <td>{{ $enseignant->master }}</td>
+                                            <td><div class="col-sm-6" style="padding-top: 30px;">
+                                                    <button class="subscribe btn btn-secondary btn-block" type="button" style="border-radius: 35px 35px 35px 35px;
+    background-color: #F0843C;
+    height: 57px;
+    width: 185px;
+    font-family: Roboto Condensed, Regular;
+    border: none;
+    font-size: 22px;
+    font-weight: 100; "><a href={{"update_enseignant/".$enseignant->id}}>Modifier</a>
+                                                    </button>
+                                                </div> </td>
+                                            <td><div class="col-sm-6" style="padding-top: 30px;">
+                                                    <button class="subscribe btn btn-secondary btn-block" type="submit" style="border-radius: 35px 35px 35px 35px;
+    background-color: #F0843C;
+    height: 57px;
+    width: 185px;
+    font-family: Roboto Condensed, Regular;
+    border: none;
+    font-size: 22px;
+    font-weight: 100; "><a href="{{"delete_enseignant/".$enseignant->id}}">Supprimer</a>
+                                                    </button>
+                                                </div> </td>
+                                    </tr>
+                                    @endforeach
+                                </table>
+                            </div>
                         </form>
                     </div>
                 </div>

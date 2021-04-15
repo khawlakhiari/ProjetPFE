@@ -21,8 +21,8 @@ class AdminController extends Controller
     public function login_admin(Request $request)
     {   $email = $request->input('email');
         $password = $request->input('password');
-        $admin= Admin::where('email',$email)->get()->first();
 
+        $admin= Admin::where('email',$email)->get()->first();
 if ($admin == null){
     Session::flash('error', "Votre email est incorrecte ");
   return redirect('/admin_login');

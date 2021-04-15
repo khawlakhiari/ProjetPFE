@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e84f0dc9-c444-4a93-b20c-e0abd93dce6e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_membre_jury/Modifier_enseignant.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Annee_universitaire.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Diplome.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Diplome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Dossier.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Dossier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Etudiant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Etudiant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Master.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Master.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Score.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Score.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MembreJuryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MembreJuryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_membre_jury/Ajouter_MJ.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_membre_jury/Ajouter_MJ.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_membre_jury/GererMJ.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_membre_jury/GererMJ.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +187,10 @@
       <workItem from="1618170875519" duration="4630000" />
       <workItem from="1618222575859" duration="5913000" />
       <workItem from="1618263084904" duration="26184000" />
-      <workItem from="1618358227217" duration="7161000" />
+      <workItem from="1618358227217" duration="7782000" />
+      <workItem from="1618414236673" duration="6798000" />
+      <workItem from="1618433237196" duration="335000" />
+      <workItem from="1618434205866" duration="17421000" />
     </task>
     <servers />
   </component>
@@ -199,6 +202,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1618281038889" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1618416410345">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1618416410345" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1617400681847">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

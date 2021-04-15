@@ -38,59 +38,37 @@
             <div class="row">
                 <div class="col-md-8 col-12 mr-3">
                     <div class="row">
-                        <form method="post" action="add_MJ">
-                            {{csrf_field()}}
+                        <form method="post" action="/update_enseignant">
+                         @csrf
                             <div class="col-md-12 form-group">
                                 <label class="creditcardtext" >Nom <span style="color:red"> * </span></label>
-                                <input type="text" class="form-control" name="nom" value="">
-                                @error('nom')
-                                <li>  <small class="form-text text-danger">{{$message}}</small></li>
-                                @enderror
+                                <input type="text" class="form-control" name="nom" value="{{$enseignants->nom}}">
+
                             </div>
                             <div class="col-md-12 form-group">
                                 <label class="creditcardtext" >Prenom <span style="color:red"> * </span></label>
 
-                                <input type="text" class="form-control"  name="prenom" value="">
-                                @error('prenom')
-                                <li>  <small class="form-text text-danger">{{$message}}</small></li>
-                                @enderror
+                                <input type="text" class="form-control"  name="prenom" value="{{$enseignants->prenom}}">
+
                             </div>
 
                             <div class="col-md-12 form-group">
                                 <label class="creditcardtext" >Email <span style="color:red"> * </span></label>
 
-                                <input type="email" class="form-control"  name="email" value="">
-                                @error('email')
-                                <li>  <small class="form-text text-danger">{{$message}}</small></li>
-                                @enderror
+                                <input type="email" class="form-control"  name="email" value="{{$enseignants->email}}">
+
                             </div>
                             <div class="col-md-12 form-group">
                                 <label class="creditcardtext" >Telephone <span style="color:red"> * </span></label>
-                             <input type="text" class="form-control"  name="telephone" value="">
-                                @error('telephone')
-                             <ul>  <li>  <small class="form-text text-danger">{{$message}}</small></li></ul>
-                                @enderror
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <label class="creditcardtext" >Mot de passe <span style="color:red"> * </span></label>
+                                <input type="text" class="form-control"  name="telephone" value="{{$enseignants->telephone}}">
 
-                                <input type="text" class="form-control"  name="password" value="">
-                                @error('password')
-                              <li>  <small class="form-text text-danger">{{$message}}</small></li>
-                                @enderror
                             </div>
-                            <div class="col-md-12 form-group">
-                                <label class="creditcardtext" >Confirmer la Mot de passe <span style="color:red"> * </span></label>
 
-                                <input type="text" class="form-control"  name="password_confirmation" value="">
-                                @error('password_confirmation')
-                                <small class="form-text text-danger">{{$message}}</small>
-                                @enderror
-                            </div>
                             <div class="col-md-12 form-group" >
                                 <label class="creditcardtext" >Il vas être le membre de jury de la master <span style="color:red"> * </span></label>
 
                                 <select id="select" name="master" class="custom-select" style="margin-top: 1px" >
+                                    <option value="{{$enseignants->master}}">{{$enseignants->master}}</option>
                                     @foreach ($masters as $master)
                                         <option value="{{$master->master}}">{{$master->master}}</option>
                                     @endforeach
@@ -106,7 +84,7 @@
     font-family: Roboto Condensed, Regular;
     border: none;
     font-size: 22px;
-    font-weight: 100; ">Ajouter
+    font-weight: 100; ">Modifier
                                 </button>
                             </div>
                         </form>

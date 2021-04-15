@@ -73,7 +73,8 @@ Route::post('/login_jury',[\App\Http\Controllers\MembreJuryController::class, 'l
 Route::get('/MJ_page',[\App\Http\Controllers\MembreJuryController::class, 'Show_MJ_page'])->name('MJ_page');
 Route::get('/add_MJ',[\App\Http\Controllers\MembreJuryController::class, 'Show_add_MJ_page'])->name('add_MJ');
 Route::post('/add_MJ',[\App\Http\Controllers\MembreJuryController::class, 'add_MJ'])->name('add_MJ');
-
+Route::get('/update_enseignant/{id_e}',[\App\Http\Controllers\MembreJuryController::class, 'Show_update_MJ_page']);
+Route::post('update_enseignant',[\App\Http\Controllers\MasterController::class, 'update_enseignant']);
 /// ////// Membre  jury Routes//////
 
 
@@ -85,5 +86,6 @@ Route::get('/update_master/{id_master}',[\App\Http\Controllers\MasterController:
 Route::post('update_master',[\App\Http\Controllers\MasterController::class, 'update_master']);
 Route::get('/delete_master/{id_master}',[\App\Http\Controllers\MasterController::class, 'delete_master']);
 ////////////////end master routes///////////////////
+
 
 
