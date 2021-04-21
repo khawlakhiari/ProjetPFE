@@ -3,16 +3,17 @@
     <div class="header">
         <div class="header-intro">
             <div class="header-left">
-                <h2 class="header2"> Bienvenue: {{session('admin')}}{{session('a')}}  </h2>
+                <h2 class="header2"> Bienvenue:  {{session('admin')}}{{session('a')}}  </h2>
 
             </div>
-
         </div>
 
         <ul class="header-navigation">
             <li class="navigation-item">
                 <a href="{{route('add_master')}}" class="navigation-item-link">Ajouter master</a>
             </li>
+
+
 
         </ul>
 
@@ -24,18 +25,15 @@
         </div>
 
         <hr>
-        @if(Session::has('success'))
-            <div class="alert alert-success" role="alert">
-                {{Session::get('success')}}
-            </div>
-        @endif
+
         <div class="col-sm-12" style="padding-left: 0; padding-right: 0; padding-top: 50px;">
             <hr>
             <div class="row">
                 <div class="col-md-8 col-12 mr-3">
                     <div class="row">
-                        <form method="post" action="/add_master">
-                            {{csrf_field()}}
+                        <form method="post" action='/'>
+                            @csrf
+                            <input type="hidden" class="form-control" id="master" name="id" value="">
                             <div class="col-md-12 form-group">
                                 <label class="creditcardtext" >Master <span style="color:red"> * </span></label>
 
@@ -47,19 +45,18 @@
                             <div class="col-md-12 form-group" >
                                 <label class="creditcardtext" >Type de master <span style="color:red"> * </span></label>
 
-                                <select id="select" name="type_m" class="custom-select" style="margin-top: 1px" >
+                                <select id="select" name="type_m" class="custom-select" style="margin-top: 1px" value="" >
+
                                     <option value="Professionnel">Professionel</option>
                                     <option value="Recherche">Recherche</option>
                                 </select>
-                                @error('type_m')
-                                <small class="form-text text-danger">{{$message}}</small>
-                                @enderror
+
                             </div>
 
                             <div class="col-md-12 form-group" >
                                 <label class="creditcardtext" >Detail sur la master <span style="color:red"> * </span></label>
 
-                                <textarea id="detail" name="detail" rows="4" cols="50" >
+                                <textarea id="detail" name="detail" rows="4" cols="50"  >{{$masters->details}}
 
                                 </textarea>
                                 @error('detail')
@@ -75,7 +72,7 @@
     font-family: Roboto Condensed, Regular;
     border: none;
     font-size: 22px;
-    font-weight: 100; ">Ajouter
+    font-weight: 100; ">Modifier
                                 </button>
                             </div>
                         </form>

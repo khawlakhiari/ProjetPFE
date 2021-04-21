@@ -1,6 +1,29 @@
 @extends('admin_folder.layouts_profile_admin.master')
 @section('contenu')
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
 
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Start: injected by Adguard -->
+
+
+        <!-- End: injected by Adguard -->
+        <link rel="icon" href="../../../../favicon.ico">
+
+        <title>Carousel Template for Bootstrap</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../../css/editor.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="carousel.css" rel="stylesheet">
     <div class="header">
         <div class="header-intro">
             <div class="header-left">
@@ -11,12 +34,10 @@
         </div>
         <ul class="header-navigation">
             <li class="navigation-item">
-                <a href="{{route('MJ_page')}}"  class="navigation-item-link">Ajouter membre de jury</a>
+                <a href="{{route('MJ_page')}}"  class="navigation-item-link">Ajouter enseignant</a>
             </li>
 
-            <li class="navigation-item">
-                <a href="" class="navigation-item-link">Modifier membre de jury</a>
-            </li>
+
 
         </ul>
 
@@ -71,22 +92,7 @@
                              <ul>  <li>  <small class="form-text text-danger">{{$message}}</small></li></ul>
                                 @enderror
                             </div>
-                            <div class="col-md-12 form-group">
-                                <label class="creditcardtext" >Mot de passe <span style="color:red"> * </span></label>
 
-                                <input type="text" class="form-control"  name="password" value="">
-                                @error('password')
-                              <li>  <small class="form-text text-danger">{{$message}}</small></li>
-                                @enderror
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <label class="creditcardtext" >Confirmer la Mot de passe <span style="color:red"> * </span></label>
-
-                                <input type="text" class="form-control"  name="password_confirmation" value="">
-                                @error('password_confirmation')
-                                <small class="form-text text-danger">{{$message}}</small>
-                                @enderror
-                            </div>
                             <div class="col-md-12 form-group" >
                                 <label class="creditcardtext" >Il vas être le membre de jury de la master <span style="color:red"> * </span></label>
 
@@ -118,15 +124,9 @@
         </div>
 
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <script type="text/javascript">
-
-
-
-
-
-    </script>
 
     </div>
     </div>

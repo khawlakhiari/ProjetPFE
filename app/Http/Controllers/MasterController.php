@@ -13,8 +13,8 @@ class MasterController extends Controller
 //////list master show////////
     public function Show_master_page()
     { $masters = DB::select('select * from masters');
-$i=1;
-        return view('admin_folder.GererMaster.gerermaster',['masters'=>$masters,'i'=>$i]);
+      $i=1;
+      return view('admin_folder.GererMaster.gerermaster',['masters'=>$masters,'i'=>$i]);
     }
     //////list master show////////
     ///
@@ -82,14 +82,13 @@ $masters=Master::select('id','master','type_m','details')->find($id_master);
     ///////update master///////
     public function update_master(Request $request) {
         $rules=    [
-            'master' => 'required | unique:masters,master',
+            'master' => 'required ',
             'type_m' => 'required',
             'detail' => 'required',
         ];
 
         $messages=       [
             'master.required' =>'Ce champ est obligatoire',
-            'master.unique'=>'Cet master existe déja',
             'type_m.required' =>'Ce champ est obligatoire',
             'detail.required' =>'Ce champ est obligatoire',
 
@@ -125,9 +124,22 @@ return redirect()->back()->with(['success'=>'Master Supprimer avec succes ']);
 /////end delete master /////
 
 
+    public function Show_master_rech_page()
+    {
+
+        $masters= Master::
+        where('type_m','Recherche')->get();
+        return view('FrontEnd.Master_rech',['masters'=>$masters]);
+    }
 
 
+    public function Show_master_pro_page()
+    {
 
+        $masters= Master::
+        where('type_m','Professionnel')->get();
+        return view('FrontEnd.Master_pro',['masters'=>$masters]);
+    }
 
 
 

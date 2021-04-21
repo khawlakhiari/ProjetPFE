@@ -28,10 +28,10 @@
                             <a href="/" class="nav-link text-left">Acceuil</a>
                         </li>
                         <li class="has-children">
-                            <a href="about.html" class="nav-link text-left">Master</a>
+                            <a  class="nav-link text-left">Master</a>
                             <ul class="dropdown">
-                                <li><a href="teachers.html">Master Recherche</a></li>
-                                <li><a href="about.html">Master Professionnel</a></li>
+                                <li><a href="{{route('master_rech')}}">Master Recherche</a></li>
+                                <li><a href="{{route('master_pro')}}">Master Professionnel</a></li>
                             </ul>
                         </li>
                         <li>

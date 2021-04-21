@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use DB;
+use Illuminate\Support\Facades\Validator;
 
 class EtudiantController extends Controller
 {
@@ -25,50 +26,85 @@ class EtudiantController extends Controller
 ////traitement de page register//////
     public function register(Request $request)
     {
-        request()->validate([
+        $rules=    [
             'nom' => ['required'],
             'prenom' => ['required'],
             'telephone' => ['required'],
+            'cin' => ['required'],
             'email' => ['required', 'email'],
             'password' => ['required', 'confirmed', 'min:8'],
             'password_confirmation' => ['required'],
-        ],
-            [
-                'password.min' => 'Pour des raisons de sécurité,votre mot de passe doit faire :min caractères.'
+        ];
+$messages=       [
+     'password.min' => 'Pour des raisons de sécurité,votre mot de passe doit faire :min caractères.',
+     'password.required'=>'ce champ est obligatoire',
+     'nom.required'=>'ce champ est obligatoire',
+     'prenom.required'=>'ce champ est obligatoire',
+     'telephone.required'=>'ce champ est obligatoire',
+     'cin.required'=>'ce champ est obligatoire',
+     'email.required'=>'ce champ est obligatoire',
+    'password_confirmation.required'=>'ce champ est obligatoire',
+    'password.confirmed'=>'La mot de passe de confirmation ne correspond pas',
 
-            ]);
-        $Etudiant = Etudiant::where('email', request('email'))->first();
-        if ($Etudiant == null) {
-
-            Etudiant::create([
-                'email' => request('email'),
-                'nom' => request('nom'),
-                'prenom' => request('prenom'),
-                'telephone' => request('telephone'),
-                'password' => bcrypt(request('password')),
-
-            ]);
-
-
-        } else {
-            Session::flash('success', "Vous etes déja inscrit ! ");
-            return redirect('/register');
+];
+        $validator = Validator::make($request->all(),$rules,$messages);
+        if($validator->fails()){
+            return redirect()->back()->withErrors($validator)->withInputs($request->all());
         }
+        $email=\request('email');
+        $password=\request('password');
+        $cin=\request('cin');
+        $telephone=\request('telephone');
+        $nom=\request('nom');
+        $prenom=\request('prenom');
+        $type_m=\request('type_m');
+$type_ma=DB::table('masters')
+        ->join('etudiants','masters.id','=','etudiants.master_id')
+        ->select('masters.type_m')
+        ->where('etudiants.cin',$cin)->get();
+dd($type_ma);
 
-        $Etudiant = Etudiant::where('email', '=', request('email'))
-            ->get()->first();
-        if (!$Etudiant == null) {
 
-            Mail::send('viewetudiant.confirm_register_email', ['email' => $Etudiant->email], function ($message) use ($request, $Etudiant) {
-                $message->to($Etudiant->email)
-                    ->from('isgs@isgs.rnu.tn')
-                    ->subject('Confirm Account');
-                //mail section
-            });
-            Session::flash('success', "Nous avons vous envoyé un e-mail de confirmation d'inscription");
-            return redirect('/register');
 
-        }
+
+
+
+//
+//        $Etudiant = Etudiant::where('email', request('email'))->first();
+//
+//        if ($Etudiant == null) {
+//
+//            Etudiant::create([
+//                'email' => request('email'),
+//                'nom' => request('nom'),
+//                'prenom' => request('prenom'),
+//                'cin' => request('cin'),
+//                'telephone' => request('telephone'),
+//                'password' => bcrypt(request('password')),
+//
+//            ]);
+//
+//
+//
+//        } else {
+//            Session::flash('error', "Vous etes déja inscrit ! ");
+//            return redirect('/register');
+//        }
+//
+//        $Etudiant = Etudiant::where('email', '=', request('email'))
+//            ->get()->first();
+//        if (!$Etudiant == null) {
+//
+//            Mail::send('viewetudiant.confirm_register_email', ['email' => $Etudiant->email], function ($message) use ($request, $Etudiant) {
+//                $message->to($Etudiant->email)
+//                    ->from('isgs@isgs.rnu.tn')
+//                    ->subject('Confirm Account');
+//                //mail section
+//            });
+//            Session::flash('success', "Nous avons vous envoyé un e-mail de confirmation d'inscription");
+//            return redirect('/register');
+//
+//        }
     }
 ////traitement de page register//////
 
@@ -94,7 +130,7 @@ class EtudiantController extends Controller
             'email' => request('email'),
             'password' => request('password'),
         ]);
-        if (!$resultat) {
+        if ($resultat) {
             return back()->withInput()->withErrors([
                 'email' => 'Vos identifiants sont incorrects',
             ]);
@@ -113,7 +149,7 @@ class EtudiantController extends Controller
 //////Show register page////////////
 
 
-/////send mail treatment when you demand to change password////
+/////send mail traitment when you demande to change password////
     public function reset_password(Request $request)
     {
 

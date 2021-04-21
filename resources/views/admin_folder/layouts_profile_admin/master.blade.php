@@ -45,8 +45,23 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
+                    <a href="{{route('show_etablissement')}}" class="sidebar-link">
+                        <span class="sidebar-link-concept">Gerer etablissement </span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="" class="sidebar-link">
+                        <span class="sidebar-link-concept">Gerer filiére</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
                     <a href="" class="sidebar-link">
                         <span class="sidebar-link-concept">Lancer la master </span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="{{route('changer_mot_passe')}}" class="sidebar-link">
+                        <span class="sidebar-link-concept">changer Mot de passe  </span>
                     </a>
                 </li>
                 <li class="sidebar-item">

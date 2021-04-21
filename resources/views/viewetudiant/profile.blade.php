@@ -92,13 +92,7 @@
                         </div>
 
 
-                        <div class="col-md-12 form-group">
-                            <label class="creditcardtext"style="margin-right: 50px">Numero CIN (ou numéro de Passeport)<span style="color:red"> * </span></label>
-                            <label class="creditcardtext" >رقم بطاقة تعريف الوطنية (رقم جواز السفر )  </label>
-                            <input type="text" class="form-control" id="cin" name="cin" required>
-                        </div>
-
-                            <div class="col-md-12 form-group">
+                           <div class="col-md-12 form-group">
                                 <label class="creditcardtext"style="margin-right: 280px">Date de naissance <span
                                         style="color:red"> * </span></label>
                                 <label class="creditcardtext" > تاريخ الميلاد</label><br><br>

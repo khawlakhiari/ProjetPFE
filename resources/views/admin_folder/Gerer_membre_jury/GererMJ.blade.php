@@ -11,13 +11,10 @@
         </div>
         <ul class="header-navigation">
             <li class="navigation-item">
-                <a href="{{route('add_MJ')}}"  class="navigation-item-link">Ajouter membre de jury</a>
+                <a href="{{route('add_MJ')}}"  class="navigation-item-link">Ajouter enseignant</a>
             </li>
 
-            <li class="navigation-item">
 
-                <a href="" class="navigation-item-link">Modifier membre de jury</a>
-            </li>
 
         </ul>
 
@@ -29,7 +26,11 @@
         </div>
 
         <hr>
-
+        @if(Session::has('success'))
+            <div class="alert alert-success" role="alert">
+                {{Session::get('success')}}
+            </div>
+        @endif
         <div class="col-sm-12" style="padding-left: 0; padding-right: 0; padding-top: 50px;">
             <hr>
             <div class="row">
@@ -57,18 +58,7 @@
                                             <td>{{ $enseignant->email }}</td>
                                             <td>{{ $enseignant->telephone }}</td>
                                             <td>{{ $enseignant->master }}</td>
-                                            <td><div class="col-sm-6" style="padding-top: 30px;">
-                                                    <button class="subscribe btn btn-secondary btn-block" type="button" style="border-radius: 35px 35px 35px 35px;
-    background-color: #F0843C;
-    height: 57px;
-    width: 185px;
-    font-family: Roboto Condensed, Regular;
-    border: none;
-    font-size: 22px;
-    font-weight: 100; "><a href={{"update_enseignant/".$enseignant->id}}>Modifier</a>
-                                                    </button>
-                                                </div> </td>
-                                            <td><div class="col-sm-6" style="padding-top: 30px;">
+                                           <td><div class="col-sm-6" style="padding-top: 30px;">
                                                     <button class="subscribe btn btn-secondary btn-block" type="submit" style="border-radius: 35px 35px 35px 35px;
     background-color: #F0843C;
     height: 57px;
@@ -76,7 +66,7 @@
     font-family: Roboto Condensed, Regular;
     border: none;
     font-size: 22px;
-    font-weight: 100; "><a href="{{"delete_enseignant/".$enseignant->id}}">Supprimer</a>
+    font-weight: 100; "><a  href="{{"delete_enseignant/".$enseignant->id}}">Supprimer</a>
                                                     </button>
                                                 </div> </td>
                                     </tr>

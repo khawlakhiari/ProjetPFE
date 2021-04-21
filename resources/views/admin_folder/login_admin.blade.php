@@ -1,5 +1,5 @@
 
-<?php ?>
+
 @extends('FrontEnd.layout')
 
 @section('content')
@@ -53,7 +53,10 @@
                             <input type="submit" value="Se connecter" class="btn btn-primary btn-lg px-5">
                         </div>
                     </div>
-                    </form>
+                            <a href="{{route('mot_passe_oublier')}}" class="small mr-3">Mot de passe oubliée ?  </a>
+
+                        </form>
+
 
 
                 </div>

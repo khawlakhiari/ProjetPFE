@@ -13,9 +13,7 @@
                 <a href="{{route('add_master')}}" class="navigation-item-link">Ajouter master</a>
             </li>
 
-            <li class="navigation-item">
-                <a href="#" class="navigation-item-link">Modifier master</a>
-            </li>
+
 
         </ul>
 

@@ -73,11 +73,24 @@ Route::post('/login_jury',[\App\Http\Controllers\MembreJuryController::class, 'l
 Route::get('/MJ_page',[\App\Http\Controllers\MembreJuryController::class, 'Show_MJ_page'])->name('MJ_page');
 Route::get('/add_MJ',[\App\Http\Controllers\MembreJuryController::class, 'Show_add_MJ_page'])->name('add_MJ');
 Route::post('/add_MJ',[\App\Http\Controllers\MembreJuryController::class, 'add_MJ'])->name('add_MJ');
-Route::get('/update_enseignant/{id_e}',[\App\Http\Controllers\MembreJuryController::class, 'Show_update_MJ_page']);
-Route::post('update_enseignant',[\App\Http\Controllers\MasterController::class, 'update_enseignant']);
+//Route::get('/update_enseignant/{id_e}',[\App\Http\Controllers\MembreJuryController::class, 'Show_update_MJ_page']);
+//Route::post('update_enseignant',[\App\Http\Controllers\MasterController::class, 'update_enseignant']);
+
+Route::get('/delete_enseignant/{id_e}',[\App\Http\Controllers\MembreJuryController::class, 'delete_enseignant']);
+
 /// ////// Membre  jury Routes//////
+///
+///
+/// //////Etablissemnet Routes//////
+Route::get('/show_etablissement',[\App\Http\Controllers\EtablissementController::class, 'Show_Etablissement_page'])->name('show_etablissement');
+Route::get('/show_add_etablissement',[\App\Http\Controllers\EtablissementController::class, 'Show_Add_etablissement_page'])->name('show_add_etablissement');
+
+Route::post('/show_add_etablissement',[\App\Http\Controllers\EtablissementController::class, 'add_etablissement'])->name('show_add_etablissement');
 
 
+/// //////Etablissement Routes//////
+///
+///
 ////////////////master routes///////////////////
 Route::get('/master_page',[\App\Http\Controllers\MasterController::class, 'Show_master_page'])->name('master_page');
 Route::get('/add_master',[\App\Http\Controllers\MasterController::class, 'Show_add_master_page'])->name('add_master');
@@ -85,7 +98,19 @@ Route::post('/add_master',[\App\Http\Controllers\MasterController::class, 'add_m
 Route::get('/update_master/{id_master}',[\App\Http\Controllers\MasterController::class, 'Show_update_master_page']);
 Route::post('update_master',[\App\Http\Controllers\MasterController::class, 'update_master']);
 Route::get('/delete_master/{id_master}',[\App\Http\Controllers\MasterController::class, 'delete_master']);
+Route::get('/master_rech',[\App\Http\Controllers\MasterController::class,'Show_master_rech_page'])->name('master_rech');
+Route::get('/master_pro',[\App\Http\Controllers\MasterController::class,'Show_master_pro_page'])->name('master_pro');
+
 ////////////////end master routes///////////////////
 
 
 
+Route::get('/changer_mot_passe',[\App\Http\Controllers\AdminController::class,'show_changer_mot_passe'])->name('changer_mot_passe');
+Route::post('/changer_mot_passe',[\App\Http\Controllers\AdminController::class,'trait_changer_mot_passe'])->name('changer_mot_passe');
+
+
+Route::get('/mot_passe_oublier',[\App\Http\Controllers\AdminController::class,'show_mot_passe_oublier']);
+Route::post('/mot_passe_oublier',[\App\Http\Controllers\AdminController::class,'trait_mot_passe_oublier'])->name('mot_passe_oublier');
+
+Route::get('/changer_mot_passe_mail',[\App\Http\Controllers\AdminController::class,'show_changer_mot_passe_mail'])->name('changer_mot_passe_mail');
+Route::post('/changer_mot_passe_mail',[\App\Http\Controllers\AdminController::class,'trait_changer_mot_passe_mail'])->name('changer_mot_passe_mail');
