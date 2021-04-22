@@ -109,6 +109,14 @@
                                         <option value="Recherche"> Recherche</option>
                                         <option value="Professionlle"> Professionlle</option></select>
                                 </div>
+
+                                <div class="col-md-12 form-group">
+                                    <label >Type de master  <span style="color:red" >*</span></label>
+
+                                    <select name="type_m" id="chx_master" class="form-control form-control-lg">Choix de Master
+                                        <option value="Recherche"> Recherche</option>
+                                        <option value="Professionlle"> Professionlle</option></select>
+                                </div>
                             </div>
                         </div>
                     </div>

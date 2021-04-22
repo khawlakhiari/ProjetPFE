@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EtablissementController;
 use App\Http\Controllers\EtudiantController;
+use App\Http\Controllers\FiliereController;
+use App\Http\Controllers\MasterController;
+use App\Http\Controllers\MembreJuryController;
 use App\Http\Controllers\TemplateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DossierController;
@@ -60,57 +65,70 @@ Route::post('fetch',[ EtudiantController::class,'fetch'])->name('fetch');
 ///
 
 //////login _admin/////////////////////
-Route::get('/admin_login',[\App\Http\Controllers\AdminController::class, 'Show_login_admin_page'])->name('admin_login');
-Route::post('/login_admin',[\App\Http\Controllers\AdminController::class, 'login_admin'])->name('login_admin');
-Route::get('/profile_admin',[\App\Http\Controllers\AdminController::class, 'Show_profile_admin_page']);
+Route::get('/admin_login',[AdminController::class, 'Show_login_admin_page'])->name('admin_login');
+Route::post('/login_admin',[AdminController::class, 'login_admin'])->name('login_admin');
+Route::get('/profile_admin',[AdminController::class, 'Show_profile_admin_page']);
 
 //////login _admin///////////////////
 ///
 ///
 /// //////Membre  jury Routes//////
-Route::get('/jury_login',[\App\Http\Controllers\MembreJuryController::class, 'Show_login_jury_page'])->name('jury_login');
-Route::post('/login_jury',[\App\Http\Controllers\MembreJuryController::class, 'login_jury'])->name('login_jury');
-Route::get('/MJ_page',[\App\Http\Controllers\MembreJuryController::class, 'Show_MJ_page'])->name('MJ_page');
-Route::get('/add_MJ',[\App\Http\Controllers\MembreJuryController::class, 'Show_add_MJ_page'])->name('add_MJ');
-Route::post('/add_MJ',[\App\Http\Controllers\MembreJuryController::class, 'add_MJ'])->name('add_MJ');
-//Route::get('/update_enseignant/{id_e}',[\App\Http\Controllers\MembreJuryController::class, 'Show_update_MJ_page']);
-//Route::post('update_enseignant',[\App\Http\Controllers\MasterController::class, 'update_enseignant']);
+Route::get('/jury_login',[MembreJuryController::class, 'Show_login_jury_page'])->name('jury_login');
+Route::post('/login_jury',[MembreJuryController::class, 'login_jury'])->name('login_jury');
+Route::get('/MJ_page',[MembreJuryController::class, 'Show_MJ_page'])->name('MJ_page');
+Route::get('/add_MJ',[MembreJuryController::class, 'Show_add_MJ_page'])->name('add_MJ');
+Route::post('/add_MJ',[MembreJuryController::class, 'add_MJ'])->name('add_MJ');
+//Route::get('/update_enseignant/{id_e}',[MembreJuryController::class, 'Show_update_MJ_page']);
+//Route::post('update_enseignant',[MasterController::class, 'update_enseignant']);
 
-Route::get('/delete_enseignant/{id_e}',[\App\Http\Controllers\MembreJuryController::class, 'delete_enseignant']);
+Route::get('/delete_enseignant/{id_e}',[MembreJuryController::class, 'delete_enseignant']);
 
 /// ////// Membre  jury Routes//////
 ///
 ///
 /// //////Etablissemnet Routes//////
-Route::get('/show_etablissement',[\App\Http\Controllers\EtablissementController::class, 'Show_Etablissement_page'])->name('show_etablissement');
-Route::get('/show_add_etablissement',[\App\Http\Controllers\EtablissementController::class, 'Show_Add_etablissement_page'])->name('show_add_etablissement');
-
-Route::post('/show_add_etablissement',[\App\Http\Controllers\EtablissementController::class, 'add_etablissement'])->name('show_add_etablissement');
+Route::get('/show_etablissement',[EtablissementController::class, 'Show_Etablissement_page'])->name('show_etablissement');
+Route::get('/show_add_etablissement',[EtablissementController::class, 'Show_Add_etablissement_page'])->name('show_add_etablissement');
+Route::post('/show_add_etablissement',[EtablissementController::class, 'add_etablissement'])->name('show_add_etablissement');
+Route::get('/update_etablissement/{id_etab}',[EtablissementController::class, 'Show_update_etab_page'])->name('update_etablissement');
+Route::post('/update_etablissement',[EtablissementController::class, 'update_etablissement'])->name('update_etablissement');
+Route::get('/delete_etab/{id_etab}',[EtablissementController::class, 'delete_etab']);
 
 
 /// //////Etablissement Routes//////
 ///
 ///
 ////////////////master routes///////////////////
-Route::get('/master_page',[\App\Http\Controllers\MasterController::class, 'Show_master_page'])->name('master_page');
-Route::get('/add_master',[\App\Http\Controllers\MasterController::class, 'Show_add_master_page'])->name('add_master');
-Route::post('/add_master',[\App\Http\Controllers\MasterController::class, 'add_master'])->name('add_master');
-Route::get('/update_master/{id_master}',[\App\Http\Controllers\MasterController::class, 'Show_update_master_page']);
-Route::post('update_master',[\App\Http\Controllers\MasterController::class, 'update_master']);
-Route::get('/delete_master/{id_master}',[\App\Http\Controllers\MasterController::class, 'delete_master']);
-Route::get('/master_rech',[\App\Http\Controllers\MasterController::class,'Show_master_rech_page'])->name('master_rech');
-Route::get('/master_pro',[\App\Http\Controllers\MasterController::class,'Show_master_pro_page'])->name('master_pro');
+Route::get('/master_page',[MasterController::class, 'Show_master_page'])->name('master_page');
+Route::get('/add_master',[MasterController::class, 'Show_add_master_page'])->name('add_master');
+Route::post('/add_master',[MasterController::class, 'add_master'])->name('add_master');
+Route::get('/update_master/{id_master}',[MasterController::class, 'Show_update_master_page']);
+Route::post('update_master',[MasterController::class, 'update_master']);
+Route::get('/delete_master/{id_master}',[MasterController::class, 'delete_master']);
+Route::get('/master_rech',[MasterController::class,'Show_master_rech_page'])->name('master_rech');
+Route::get('/master_pro',[MasterController::class,'Show_master_pro_page'])->name('master_pro');
 
 ////////////////end master routes///////////////////
 
 
 
-Route::get('/changer_mot_passe',[\App\Http\Controllers\AdminController::class,'show_changer_mot_passe'])->name('changer_mot_passe');
-Route::post('/changer_mot_passe',[\App\Http\Controllers\AdminController::class,'trait_changer_mot_passe'])->name('changer_mot_passe');
+Route::get('/changer_mot_passe',[AdminController::class,'show_changer_mot_passe'])->name('changer_mot_passe');
+Route::post('/changer_mot_passe',[AdminController::class,'trait_changer_mot_passe'])->name('changer_mot_passe');
 
 
-Route::get('/mot_passe_oublier',[\App\Http\Controllers\AdminController::class,'show_mot_passe_oublier']);
-Route::post('/mot_passe_oublier',[\App\Http\Controllers\AdminController::class,'trait_mot_passe_oublier'])->name('mot_passe_oublier');
+Route::get('/mot_passe_oublier',[AdminController::class,'show_mot_passe_oublier']);
+Route::post('/mot_passe_oublier',[AdminController::class,'trait_mot_passe_oublier'])->name('mot_passe_oublier');
 
-Route::get('/changer_mot_passe_mail',[\App\Http\Controllers\AdminController::class,'show_changer_mot_passe_mail'])->name('changer_mot_passe_mail');
-Route::post('/changer_mot_passe_mail',[\App\Http\Controllers\AdminController::class,'trait_changer_mot_passe_mail'])->name('changer_mot_passe_mail');
+Route::get('/changer_mot_passe_mail',[AdminController::class,'show_changer_mot_passe_mail'])->name('changer_mot_passe_mail');
+Route::post('/changer_mot_passe_mail',[AdminController::class,'trait_changer_mot_passe_mail'])->name('changer_mot_passe_mail');
+
+
+/////////////////////////////////////////////////   Filiere Routes   ////////////////////////////////////////////////////////////////
+Route::get('/show_filiere',[FiliereController::class, 'show_filiere_page'])->name('show_filiere');
+Route::get('/add_filiere',[FiliereController::class, 'show_add_filiere'])->name('add_filiere');
+Route::post('/add_filiere',[FiliereController::class, 'trait_add_filiere'])->name('add_filiere');
+Route::get('/update_filiere/{id_f}',[FiliereController::class, 'show_update_filiere'])->name('update_filiere');
+Route::post('/update_filieres',[FiliereController::class, 'trait_update_filiere'])->name('update_filieres');
+//Route::get('/delete_etab/{id_etab}',[FiliereController::class, 'delete_etab']);
+
+////////////////////////////////////////////////   Filiere Routes   ////////////////////////////////////////////////////////////////

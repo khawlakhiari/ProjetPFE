@@ -50,7 +50,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="" class="sidebar-link">
+                    <a href="{{route('show_filiere')}}" class="sidebar-link">
                         <span class="sidebar-link-concept">Gerer filiére</span>
                     </a>
                 </li>
