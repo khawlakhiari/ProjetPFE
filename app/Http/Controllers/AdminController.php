@@ -27,7 +27,7 @@ class AdminController extends Controller
         $admin = Admin::where('email', $email)->get()->first();
         if ($admin == null) {
             Session::flash('error', "Votre email est incorrecte ");
-            return redirect('/admin_login');
+            return redirect('/login_admin');
 
         } else {
 
@@ -37,7 +37,7 @@ class AdminController extends Controller
                 return redirect('/profile_admin');
             } else {
                 Session::flash('error', "Votre mot de passe est incorrecte ");
-                return redirect('/admin_login');
+                return redirect('/login_admin');
             }
         }
     }
@@ -134,7 +134,7 @@ class AdminController extends Controller
 
         $admin->save();
         Session::flash('success', "Votre Mot de passe a ete changer correctement ");
-        return redirect('/admin_login');
+        return redirect('/login_admin');
     }
 
 }

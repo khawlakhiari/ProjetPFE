@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\dossiers;
+use App\Models\Etablissement;
 use App\Models\Etudiant;
 use App\Models\Universite;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
@@ -17,7 +19,7 @@ class EtudiantController extends Controller
 
 //////Show register page///////////
     public function Show_register_page()
-    {
+    { $master= DB:: ta
         return view('viewetudiant.register');
     }
 //////Show register page////////////
@@ -58,11 +60,21 @@ $messages=       [
         $nom=\request('nom');
         $prenom=\request('prenom');
         $type_m=\request('type_m');
+        $encrypted_password=Crypt:: encryptString($password);
 $type_ma=DB::table('masters')
         ->join('etudiants','masters.id','=','etudiants.master_id')
-        ->select('masters.type_m')
-        ->where('etudiants.cin',$cin)->get();
-dd($type_ma);
+        ->select('etudiants.cin')
+        ->where('etudiants.cin',$cin)
+        ->get();
+        $etudiant=new Etudiant();
+        $etudiant->email=$email;
+        $etudiant->password=$encrypted_password;
+        $etudiant->cin=$cin;
+        $etudiant->telephone=$telephone;
+        $etudiant->nom=$nom;
+        $etudiant->prenom=$prenom;
+        $etudiant->save();
+
 
 
 

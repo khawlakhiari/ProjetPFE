@@ -59,7 +59,7 @@
             <div class="row">
                 <div class="col-md-8 col-12 mr-3">
                     <div class="row">
-                        <form method="post" action="/show_add_etablissement">
+                        <form method="post" action="{{route('show_add_etablissement')}}">
                             {{csrf_field()}}
                             <div class="col-md-12 form-group">
                                 <label class="creditcardtext" >Etablissement <span style="color:red"> * </span></label>

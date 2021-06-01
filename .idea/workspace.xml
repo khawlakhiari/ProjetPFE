@@ -2,36 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e84f0dc9-c444-4a93-b20c-e0abd93dce6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/FrontEnd/Master_pro.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/FrontEnd/Master_rech.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_etablissement/Ajouter_etablissemnt.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_etablissement/Gerer_Etablissement.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_etablissement/update_etablissement.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_membre_jury/Send_mail_admin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_folder/changer_mot_passe.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_folder/changer_mot_passe_mail.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_folder/mot_passe_oublier.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_folder/sendmail_admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EtudiantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EtudiantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MasterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MasterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MembreJuryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MembreJuryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/FrontEnd/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FrontEnd/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/GererMaster/ajouter_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/GererMaster/ajouter_master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/GererMaster/gerermaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/GererMaster/gerermaster.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/GererMaster/update_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/GererMaster/update_master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_membre_jury/Ajouter_MJ.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_membre_jury/Ajouter_MJ.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_membre_jury/GererMJ.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_membre_jury/GererMJ.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_membre_jury/Modifier_enseignant.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/layouts_profile_admin/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/layouts_profile_admin/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/login_admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/login_admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/profile_admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/profile_admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/viewetudiant/Send_mail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/viewetudiant/Send_mail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_etablissement/Ajouter_etablissemnt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_etablissement/Ajouter_etablissemnt.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/viewetudiant/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/viewetudiant/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/viewetudiant/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/viewetudiant/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +146,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin_folder/Gerer_membre_jury" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -220,7 +196,12 @@
       <workItem from="1618609871396" duration="4738000" />
       <workItem from="1618786436386" duration="10677000" />
       <workItem from="1618871574137" duration="5808000" />
-      <workItem from="1618913178365" duration="29121000" />
+      <workItem from="1618913178365" duration="32643000" />
+      <workItem from="1619104085547" duration="1910000" />
+      <workItem from="1619121160117" duration="4815000" />
+      <workItem from="1619129350907" duration="736000" />
+      <workItem from="1619130199731" duration="1056000" />
+      <workItem from="1619132174675" duration="1107000" />
     </task>
     <servers />
   </component>
@@ -228,10 +209,18 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619037638364">
+    <state x="1366" y="205" key="#SQL_Dialects" timestamp="1619104431218">
+      <screen x="1366" y="0" width="1024" height="728" />
+    </state>
+    <state x="1366" y="205" key="#SQL_Dialects/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1619104431218" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619041246791">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1619037638364" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1619041246791" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1619131769058">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1619131769058" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1618416410345">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -240,5 +229,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1618949187428" />
+    <state x="1541" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1619104891815">
+      <screen x="1366" y="0" width="1024" height="728" />
+    </state>
+    <state x="1541" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1619104891815" />
   </component>
 </project>
