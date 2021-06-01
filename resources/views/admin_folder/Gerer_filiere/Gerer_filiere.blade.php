@@ -11,7 +11,7 @@
 
         <ul class="header-navigation">
             <li class="navigation-item">
-                <a href="{{route('show_add_etablissement')}}"  class="navigation-item-link">Ajouter etablissement</a>
+                <a href="{{route('add_filiere')}}"  class="navigation-item-link">Ajouter Filiere</a>
             </li>
 
         </ul>
@@ -36,21 +36,22 @@
                                 <table class="table table-striped table-hover table-condensed">
                                     <tr>
                                         <td> Id</td>
+                                        <td>Filiére</td>
+                                        <td>Niveau</td>
                                         <td>Etablissement</td>
-                                        <td>universite</td>
-
                                     </tr>
 
 
-                                    <tr>
+                                        <tr>
+                                            @foreach ($filieres as $filiere)
+                                                <td>{{ $i++ }}</td>
+                                                <td>{{ $filiere->filiere }}</td>
+                                                <td>{{ $filiere->niveau }}</td>
+                                                <td>{{ $filiere->etablissement }}</td>
 
-                                        @foreach ($etablissements as $etablissement)
-                                            <td>{{ $i++ }}</td>
-                                            <td>{{ $etablissement->etablissement }}</td>
-                                            <td>{{ $etablissement->universite }}</td>
 
 
-                                            <td><div class="col-sm-6" style="padding-top: 30px;">
+                                                <td><div class="col-sm-6" style="padding-top: 30px;">
                                                     <button class="subscribe btn btn-secondary btn-block" type="submit" style="border-radius: 35px 35px 35px 35px;
     background-color: #F0843C;
     height: 57px;
@@ -58,7 +59,7 @@
     font-family: Roboto Condensed, Regular;
     border: none;
     font-size: 22px;
-    font-weight: 100; "><a  href="{{"update_etablissement/".$etablissement->id}}">Modifier</a>
+    font-weight: 100; "><a  href="{{"update_filiere/".$filiere->id_f}}">Modifier</a>
                                                     </button>
                                                 </div> </td>
                                             <td><div class="col-sm-6" style="padding-top: 30px;">
@@ -69,14 +70,14 @@
     font-family: Roboto Condensed, Regular;
     border: none;
     font-size: 22px;
-    font-weight: 100; "><a  href="{{"delete_etab/". $etablissement->id}}">Supprimer</a>
+    font-weight: 100; "><a  href="">Supprimer</a>
                                                     </button>
                                                 </div> </td>
                                     </tr>
+
+
 
                                     @endforeach
-
-
                                 </table>
                             </div>
                         </form>

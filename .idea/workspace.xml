@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e84f0dc9-c444-4a93-b20c-e0abd93dce6e" name="Default Changelist" comment="">
+<<<<<<< HEAD
+=======
+      <change afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_filiere/Ajouter_filiere.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_filiere/Gerer_filiere.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_filiere/update_filiere.blade.php" afterDir="false" />
+>>>>>>> ac9418a5c07ca34a43e1c54525cf7638d1d73f48
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EtudiantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EtudiantController.php" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_etablissement/Ajouter_etablissemnt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_etablissement/Ajouter_etablissemnt.blade.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MasterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MasterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_etablissement/Gerer_Etablissement.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_etablissement/Gerer_Etablissement.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_etablissement/update_etablissement.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/Gerer_etablissement/update_etablissement.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin_folder/layouts_profile_admin/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_folder/layouts_profile_admin/master.blade.php" afterDir="false" />
+>>>>>>> ac9418a5c07ca34a43e1c54525cf7638d1d73f48
       <change beforePath="$PROJECT_DIR$/resources/views/viewetudiant/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/viewetudiant/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/viewetudiant/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/viewetudiant/register.blade.php" afterDir="false" />
     </list>
@@ -197,11 +209,15 @@
       <workItem from="1618786436386" duration="10677000" />
       <workItem from="1618871574137" duration="5808000" />
       <workItem from="1618913178365" duration="32643000" />
+<<<<<<< HEAD
       <workItem from="1619104085547" duration="1910000" />
       <workItem from="1619121160117" duration="4815000" />
       <workItem from="1619129350907" duration="736000" />
       <workItem from="1619130199731" duration="1056000" />
       <workItem from="1619132174675" duration="1107000" />
+=======
+      <workItem from="1619045498950" duration="26185000" />
+>>>>>>> ac9418a5c07ca34a43e1c54525cf7638d1d73f48
     </task>
     <servers />
   </component>
@@ -209,6 +225,7 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
     <state x="1366" y="205" key="#SQL_Dialects" timestamp="1619104431218">
       <screen x="1366" y="0" width="1024" height="728" />
     </state>
@@ -221,6 +238,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1619131769058" />
+=======
+    <state x="515" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619125095357">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="515" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1619125095357" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619130263705">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1619130263705" />
+>>>>>>> ac9418a5c07ca34a43e1c54525cf7638d1d73f48
     <state width="498" height="446" key="SwitcherDM" timestamp="1618416410345">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

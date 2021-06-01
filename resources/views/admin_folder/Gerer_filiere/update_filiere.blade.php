@@ -34,14 +34,14 @@
             <div class="row">
                 <div class="col-md-8 col-12 mr-3">
                     <div class="row">
-                        <form method="post" action='{{route('update_etablissement')}}'>
+                        <form method="post" action='{{route('update_filieres')}}'>
                             @csrf
 
-                            <input type="hidden" class="form-control" id="master" name="id" value="{{$etablissements->id}}">
+                            <input type="text" class="form-control" id="master" name="id" value="">
                             <div class="col-md-12 form-group">
-                                <label class="creditcardtext" >Etablissement <span style="color:red"> * </span></label>
-                                <input type="text" class="form-control"  value="{{$etablissements->etablissement}}" name="etablissement">
-                                @error('etablissement')
+                                <label class="creditcardtext" >Filiere <span style="color:red"> * </span></label>
+                                <input type="text" class="form-control"  value="" name="filiere">
+                                @error('filiere')
                                 <small class="form -text text-danger">{{$message}}</small>
                                 @enderror
                             </div>
@@ -50,9 +50,9 @@
                                 <label class="creditcardtext" >Universite <span style="color:red"> * </span></label>
 
                                 <select id="select" name="universite" class="custom-select" style="margin-top: 1px"  >
-                                    <option value="{{$etablissements->universite}}">{{$etablissements->universite}}</option>
-                                    @foreach ($universites as $universite)
-                                        <option value="{{$universite->universite}}">{{$universite->universite}}</option>
+                                    <option value=""></option>
+                                    @foreach ($etablissements as $etablissement)
+                                        <option value="{{$etablissement->etablissement}}">{{$etablissement->etablissement}}</option>
                                     @endforeach
                                 </select>
 
